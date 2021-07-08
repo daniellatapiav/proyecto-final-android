@@ -1,4 +1,4 @@
-package com.example.g1_proyectofinal.ui.register
+package com.example.g1_proyectofinal.fragments.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

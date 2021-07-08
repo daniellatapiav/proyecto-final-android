@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.G1_ProyectoFinal">
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ui.reports.ReportsActivity" />
-        <activity android:name=".ui.assignment.AssignmentActivity" />
-        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".fragments.reports.ReportsActivity" />
+        <activity android:name=".fragments.assignment.AssignmentActivity" />
+        <activity android:name=".fragments.register.RegisterActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

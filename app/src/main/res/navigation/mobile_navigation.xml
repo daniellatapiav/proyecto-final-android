@@ -6,22 +6,22 @@
     app:startDestination="@id/nav_home">
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.g1_proyectofinal.ui.HomeFragment"
+        android:name="com.example.g1_proyectofinal.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_reports"
-        android:name="com.example.g1_proyectofinal.ui.reports.ReportsHomeFragment"
+        android:name="com.example.g1_proyectofinal.fragments.reports.ReportsHomeFragment"
         android:label="fragment_reports_home"
         tools:layout="@layout/fragment_reports_home" />
     <fragment
         android:id="@+id/nav_assigment"
-        android:name="com.example.g1_proyectofinal.ui.assignment.AssigmentHomeFragment"
+        android:name="com.example.g1_proyectofinal.fragments.assignment.AssigmentHomeFragment"
         android:label="fragment_assigment_home"
         tools:layout="@layout/fragment_assigment_home" />
     <fragment
         android:id="@+id/nav_register"
-        android:name="com.example.g1_proyectofinal.ui.register.RegisterGroupFragment"
-        android:label="fragment_register_group"
-        tools:layout="@layout/fragment_register_group" />
+        android:name="com.example.g1_proyectofinal.fragments.register.RegisterMetricFragment"
+        android:label="fragment_register_metric"
+        tools:layout="@layout/fragment_register_metric" />
 </navigation>

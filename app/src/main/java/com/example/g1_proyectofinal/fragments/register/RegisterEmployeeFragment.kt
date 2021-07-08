@@ -1,4 +1,4 @@
-package com.example.g1_proyectofinal.ui.register
+package com.example.g1_proyectofinal.fragments.register
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -10,13 +10,8 @@ import android.view.ViewGroup
 import android.widget.*
 import com.example.g1_proyectofinal.R
 import com.example.g1_proyectofinal.models.Employee
-import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class RegisterEmployeeFragment : Fragment() {

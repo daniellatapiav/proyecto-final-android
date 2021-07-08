@@ -1,4 +1,4 @@
-package com.example.g1_proyectofinal.ui.assignment
+package com.example.g1_proyectofinal.fragments.assignment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

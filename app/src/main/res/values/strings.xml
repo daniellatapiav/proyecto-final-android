@@ -53,6 +53,8 @@
     <string name="label_nurseTec">Técnico/a de enfermería</string>
     <string name="title_registerGroup">Registra un grupo</string>
     <string name="hint_description">Descripción</string>
+    <string name="title_registerMetric">Registra un indicador</string>
+    <string name="hint_formula">Fórmula (referencial)</string>
 
     <string-array name="tipos_documento">
         <item>Tipo</item>

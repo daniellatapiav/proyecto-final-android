@@ -1,4 +1,4 @@
-package com.example.g1_proyectofinal.ui.register
+package com.example.g1_proyectofinal.fragments.register
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -9,12 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.Toast
 import com.example.g1_proyectofinal.R
-import com.example.g1_proyectofinal.models.Employee
 import com.example.g1_proyectofinal.models.Group
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
