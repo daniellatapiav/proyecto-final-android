@@ -9,12 +9,18 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.g1_proyectofinal.R
+import com.example.g1_proyectofinal.models.FlatMetricHandler
+import com.example.g1_proyectofinal.models.GroupHandler
+import com.example.g1_proyectofinal.services.HealthCareService
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         var view:View = inflater.inflate(R.layout.fragment_home, container, false)
 
         var titleHello:TextView = view.findViewById(R.id.titleName)

@@ -55,6 +55,7 @@
     <string name="hint_description">Descripción</string>
     <string name="title_registerMetric">Registra un indicador</string>
     <string name="hint_formula">Fórmula (referencial)</string>
+    <string name="asignar">Asignar</string>
 
     <string-array name="tipos_documento">
         <item>Tipo</item>

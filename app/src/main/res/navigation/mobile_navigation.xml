@@ -44,4 +44,9 @@
         android:name="com.example.g1_proyectofinal.fragments.register.RegisterMetricTypeFragment"
         android:label="fragment_register_metric_type"
         tools:layout="@layout/fragment_register_metric_type" />
+    <fragment
+        android:id="@+id/nav_assigmentGroup"
+        android:name="com.example.g1_proyectofinal.fragments.assignment.AssigmentGroupFragment"
+        android:label="fragment_assigment_group"
+        tools:layout="@layout/fragment_assigment_group" />
 </navigation>
