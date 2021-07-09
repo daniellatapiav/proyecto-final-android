@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 import com.example.g1_proyectofinal.R
 
 class RegisterHomeFragment : Fragment() {
@@ -21,19 +22,19 @@ class RegisterHomeFragment : Fragment() {
         var menuRegisterMetricType:Button = view.findViewById(R.id.menuRegisterMetricType)
 
         menuRegisterEmployee.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_registerEmployee)
         }
 
         menuRegisterGroup.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_registerGroup)
         }
 
         menuRegisterMetric.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_registerMetric)
         }
 
         menuRegisterMetricType.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_registerMetricType)
         }
 
         return view

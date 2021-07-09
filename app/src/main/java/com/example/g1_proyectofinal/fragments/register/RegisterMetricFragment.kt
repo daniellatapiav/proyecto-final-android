@@ -28,7 +28,7 @@ class RegisterMetricFragment : Fragment() {
 
         val spinnerMetricTypes:Spinner = view.findViewById(R.id.spinnerMetricTypes)
         fillMetricTypes(db, spinnerMetricTypes)
-        var type:Int = -1
+        var typeName:String = ""
 
         spinnerMetricTypes.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -37,17 +37,7 @@ class RegisterMetricFragment : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                db.collection("metrics")
-                    .whereEqualTo("metricDescription", parent?.getItemAtPosition(position).toString())
-                    .get()
-                    .addOnSuccessListener { result ->
-                        for (document in result) {
-                            type = document.get("metricId").toString().toInt()
-                        }
-                    }
-                    .addOnFailureListener { exception ->
-                        Log.d(ContentValues.TAG, "Error getting documents: ", exception)
-                    }
+                typeName = parent?.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -62,6 +52,19 @@ class RegisterMetricFragment : Fragment() {
             var formula:String = txtFormula.text.toString()
 
             var id:Int = -1
+            var type:Int = -1
+
+            db.collection("metrics")
+                .whereEqualTo("metricDescription", typeName)
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        type = document.get("metricId").toString().toInt()
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(ContentValues.TAG, "Error getting documents: ", exception)
+                }
 
             db.collection("metrics")
                 .orderBy("metricId", Query.Direction.DESCENDING)
@@ -98,25 +101,26 @@ class RegisterMetricFragment : Fragment() {
     }
 
     private fun fillMetricTypes(db:FirebaseFirestore, spinner:Spinner) {
-        var metricArray:ArrayList<String> = ArrayList()
+        var list = mutableListOf<String>()
 
         db.collection("metrics")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    metricArray.add(document.get("metricDescription").toString())
+                    list.add(document.get("metricDescription").toString())
                 }
             }
             .addOnFailureListener { exception ->
                 Log.d(ContentValues.TAG, "Error getting documents: ", exception)
             }
 
-        val arrAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
+        val adapter = ArrayAdapter(
             requireContext(),
             android.R.layout.simple_spinner_dropdown_item,
-            metricArray
+            list
         )
 
-        spinner.adapter = arrAdapter
+        spinner.adapter = adapter
+        adapter.notifyDataSetChanged()
     }
 }

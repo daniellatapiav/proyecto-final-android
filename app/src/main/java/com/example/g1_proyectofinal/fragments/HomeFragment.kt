@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.Navigation
 import com.example.g1_proyectofinal.R
 
 class HomeFragment : Fragment() {
@@ -27,15 +28,15 @@ class HomeFragment : Fragment() {
         titleHello.text = "Hola, ${userName}"
 
         menuRegister.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_registerHome)
         }
 
         menuAssign.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_assigmentHome)
         }
 
         menuReport.setOnClickListener {
-            // TODO: Cambiar de fragment/activity
+            Navigation.findNavController(view).navigate(R.id.nav_reportsHome)
         }
 
         return view

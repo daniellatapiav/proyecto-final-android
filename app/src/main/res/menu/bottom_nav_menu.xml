@@ -7,17 +7,17 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/nav_register"
+        android:id="@+id/nav_registerMetric"
         android:icon="@drawable/ic_baseline_edit_24"
         android:title="@string/title_register" />
 
     <item
-        android:id="@+id/nav_assigment"
+        android:id="@+id/nav_assigmentHome"
         android:icon="@drawable/ic_baseline_assignment_24"
         android:title="@string/title_assignment" />
 
     <item
-        android:id="@+id/nav_reports"
+        android:id="@+id/nav_reportsHome"
         android:icon="@drawable/ic_baseline_timeline_24"
         android:title="@string/title_reports" />
 

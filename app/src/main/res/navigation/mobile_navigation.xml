@@ -10,18 +10,38 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/nav_reports"
+        android:id="@+id/nav_reportsHome"
         android:name="com.example.g1_proyectofinal.fragments.reports.ReportsHomeFragment"
         android:label="fragment_reports_home"
         tools:layout="@layout/fragment_reports_home" />
     <fragment
-        android:id="@+id/nav_assigment"
+        android:id="@+id/nav_assigmentHome"
         android:name="com.example.g1_proyectofinal.fragments.assignment.AssigmentHomeFragment"
         android:label="fragment_assigment_home"
         tools:layout="@layout/fragment_assigment_home" />
     <fragment
-        android:id="@+id/nav_register"
+        android:id="@+id/nav_registerMetric"
         android:name="com.example.g1_proyectofinal.fragments.register.RegisterMetricFragment"
         android:label="fragment_register_metric"
         tools:layout="@layout/fragment_register_metric" />
+    <fragment
+        android:id="@+id/nav_registerHome"
+        android:name="com.example.g1_proyectofinal.fragments.register.RegisterHomeFragment"
+        android:label="fragment_register_home"
+        tools:layout="@layout/fragment_register_home" />
+    <fragment
+        android:id="@+id/nav_registerEmployee"
+        android:name="com.example.g1_proyectofinal.fragments.register.RegisterEmployeeFragment"
+        android:label="fragment_register_employee"
+        tools:layout="@layout/fragment_register_employee" />
+    <fragment
+        android:id="@+id/nav_registerGroup"
+        android:name="com.example.g1_proyectofinal.fragments.register.RegisterGroupFragment"
+        android:label="fragment_register_group"
+        tools:layout="@layout/fragment_register_group" />
+    <fragment
+        android:id="@+id/nav_registerMetricType"
+        android:name="com.example.g1_proyectofinal.fragments.register.RegisterMetricTypeFragment"
+        android:label="fragment_register_metric_type"
+        tools:layout="@layout/fragment_register_metric_type" />
 </navigation>
