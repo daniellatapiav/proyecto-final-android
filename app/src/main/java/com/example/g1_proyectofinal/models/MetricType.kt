@@ -4,5 +4,5 @@ data class MetricType(
     val metricTypeId: Int,
     val metricTypeDescription: String,
     val metricType: Boolean,
-    val metricTypeValues: ArrayList<Any>
+    val metricTypeValues: ArrayList<String>
 )

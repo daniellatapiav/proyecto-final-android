@@ -29,7 +29,7 @@ object HealthCareService {
                     MetricType(doc.get("metricTypeId").toString().toInt(),
                         doc.get("metricTypeDescription") as String,
                         doc.get("metricType") as Boolean,
-                        doc.get("metricTypeValues") as ArrayList<Any>)
+                        doc.get("metricTypeValues") as ArrayList<String>)
                 })
 
             }.addOnFailureListener { exception ->
