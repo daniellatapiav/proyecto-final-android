@@ -43,7 +43,7 @@ class RegisterGroupFragment : Fragment() {
                     if (description == "" || description == null) {
                         Toast.makeText(activity, "Ingresa la descripción", Toast.LENGTH_LONG).show()
                     } else {
-                        var group:Group = Group(id, description, true)
+                        var group:Group = Group(id, description, true, arrayListOf())
                         db.collection("groups")
                             .add(group)
                             .addOnSuccessListener { documentReference ->

@@ -30,11 +30,19 @@ class AssigmentHomeFragment : Fragment() {
     ): View {
         val view:View = inflater.inflate(R.layout.fragment_assigment_home, container, false)
         val btnAssignGroup: Button = view.findViewById(R.id.btnAssignGroup)
+        val btnAssignEmployee: Button = view.findViewById(R.id.btnAssignEmployee)
 
         btnAssignGroup.setOnClickListener {
 
             HealthCareService.getFlatMetrics()
             Navigation.findNavController(view).navigate(R.id.nav_assigmentGroup)
+
+        }
+
+        btnAssignEmployee.setOnClickListener {
+
+            HealthCareService.getFlatMetrics()
+            Navigation.findNavController(view).navigate(R.id.nav_assigmentEmployee)
 
         }
 
