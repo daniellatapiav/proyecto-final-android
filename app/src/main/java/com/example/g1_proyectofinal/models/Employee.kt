@@ -10,7 +10,7 @@ data class Employee(
     val email: String,
     val employeeGroup: Int,
     val employeeStatus: Boolean,
-    val assessment: Map<String, Any>? = null,
+    val assessment: MutableList<Assessment>? = null,
     val docId: String? = null
 ) {
 

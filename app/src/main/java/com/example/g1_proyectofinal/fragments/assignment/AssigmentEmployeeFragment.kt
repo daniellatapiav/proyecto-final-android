@@ -63,14 +63,16 @@ class AssigmentEmployeeFragment : Fragment() {
 
             val dbEmployeeRef = db.collection("employees").document(employee?.docId.toString())
 
-            Log.d("Employee ID: ", employee?.docId.toString())
+
             db.runTransaction { transaction ->
 
-                var assessmentArrayMap: ArrayList<Map<String, Any>> = arrayListOf()
-                rvMetrics.refreshDrawableState()
-
+                var assessmentArrayMap: MutableList<Assessment> = mutableListOf()
+                rvMetrics.Recycler()
+                Log.d("Employee ID: ", employee?.docId.toString())
+                Log.d("SIZE: ", rvMetrics.childCount.toString())
                 for(item in rvMetrics.iterator())
                 {
+                    Log.d("1: ", rvMetrics.childCount.toString())
                     var assessment: Map<String,Any> = mapOf()
 
                     val metricId: TextView = item.findViewById(R.id.tvMetricId)
@@ -78,9 +80,11 @@ class AssigmentEmployeeFragment : Fragment() {
                     val metricType: TextView = item.findViewById(R.id.tvType)
                     var value = ""
 
+                    Log.d("2: ", rvMetrics.childCount.toString())
+
                     if(metricType.text.contains("Cuantitativo")){
-                        val stars: RatingBar = item.findViewById(R.id.tvType)
-                        value = stars.numStars.toString()
+                        val stars: RatingBar = item.findViewById(R.id.rbCuantitativo)
+                        value = stars.rating.toString()
                     }else{
                         val mtvCualitativo: EditText = view.findViewById(R.id.mtlCualitativo)
                         value = mtvCualitativo.text.toString()
@@ -91,13 +95,20 @@ class AssigmentEmployeeFragment : Fragment() {
                     Log.d("metricType: ", metricType.text.toString())
                     Log.d("value: ", value.toString())
 
+                    assessmentArrayMap.add(Assessment( metricId.text.toString().toInt(), metricDescription.text.toString(), metricType.text.toString(), value))
+
+                    /*
                     assessment.plus(metricId.text.toString().toInt() to "metricId")
                     assessment.plus(metricDescription.text.toString() to "metricDescription")
                     assessment.plus(metricType.text.toString() to "metricType")
                     assessment.plus(value to "value")
 
 
-                    assessmentArrayMap.plus(assessment)
+                    assessment.plus("metricId" to metricId.text.toString().toInt())
+                    assessment.plus("metricDescription" to metricDescription.text.toString() )
+                    assessment.plus( "metricType" to metricType.text.toString())
+                    assessment.plus("value" to value )
+                    */
 
                 }
 
