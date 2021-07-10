@@ -57,6 +57,17 @@
     <string name="hint_formula">Fórmula (referencial)</string>
     <string name="asignar">Asignar</string>
     <string name="evaluar">Evaluar</string>
+    <string name="title_registerMetricType">Registra un tipo de indicador</string>
+    <string name="subtitle1_registerMetricType">Tipo</string>
+    <string name="subtitle2_registerMetricType">Valores</string>
+    <string name="hint_value1">Valor 1</string>
+    <string name="hint_value2">Valor 2</string>
+    <string name="hint_value3">Valor 3</string>
+    <string name="hint_value4">Valor 4</string>
+    <string name="hint_value5" />
+    <string name="label_quantitative">Cuantitativo</string>
+    <string name="label_qualitative">Cualitativo</string>
+    <string name="btn_addValue">Agregar valor</string>
 
     <string-array name="tipos_documento">
         <item>Tipo</item>
